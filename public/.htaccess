@@ -1,0 +1,30 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule (^|/)\. - [F]
+    RewriteRule (^|/)(composer\.(json|lock)|\.env|\.gitignore|README\.md)$ - [F,L]
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d [OR]
+    RewriteCond %{REQUEST_FILENAME} -l
+    RewriteRule ^ - [L]
+    RewriteCond %{REQUEST_URI} !^/admin [NC]
+    RewriteRule ^([^/]+)/?$ public/$1.php [L]
+    RewriteRule ^admin/([^/]+)/?$ public/admin/$1.php [L]
+    RewriteRule ^admin/?$ public/admin/index.php [L]
+    RewriteRule ^$ public/index.php [L]
+    ErrorDocument 404 /public/error/404.php
+    ErrorDocument 500 /public/error/500.php
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header always unset "X-Powered-By"
+</IfModule>
+
+<IfModule mod_php.c>
+    php_flag expose_php Off
+    php_value session.cookie_httponly 1
+    php_value session.cookie_secure 1
+    php_value session.use_strict_mode 1
+</IfModule>
