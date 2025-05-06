@@ -170,6 +170,7 @@ try {
 
     $search = isset($_GET['search']) ? $_GET['search'] : '';
     $purokFilter = isset($_GET['purok']) ? (int)$_GET['purok'] : 0;
+    $householdFilter = isset($_GET['household']) ? (int)$_GET['household'] : 0;
     
     $whereClause = [];
     $params = [];
@@ -184,6 +185,11 @@ try {
     if ($purokFilter > 0) {
         $whereClause[] = "r.purok_id = ?";
         $params[] = $purokFilter;
+    }
+
+    if ( $householdFilter > 0 ) {
+        $whereClause[] = "r.household_id = ?";
+        $params[]      = $householdFilter;
     }
     
     $whereSQL = !empty($whereClause) ? "WHERE " . implode(" AND ", $whereClause) : "";
