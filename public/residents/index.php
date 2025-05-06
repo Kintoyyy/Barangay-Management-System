@@ -243,8 +243,6 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Resident Management</title>
     <?php include_once INCLUDES_PATH . '/styles.php'; ?>
-    <!-- Add Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
         .toast-container {
             position: fixed;
