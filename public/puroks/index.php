@@ -263,7 +263,7 @@ try {
                     <?php else: ?>
                         <div class="text-center py-5">
                             <i class="bi bi-geo-alt-fill" style="font-size: 3rem;"></i>
-                            <p class="mt-3 text-muted">Select a purok to edit or add a new one</p>
+                            <p class="mt-3 text-muted">Select a purok to or add a new one</p>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -308,12 +308,12 @@ try {
                                                     <div class="btn-group" role="group">
                                                         <a href="index.php?action=edit&id=<?= (int)$purok['purok_id'] ?>"
                                                            class="btn btn-info btn-sm">
-                                                            <i class="bi bi-pencil"></i> Edit
+                                                            <i class="bi bi-pencil"></i>
                                                         </a>
                                                         <a href="index.php?action=delete&id=<?= (int)$purok['purok_id'] ?>"
                                                            class="btn btn-danger btn-sm"
                                                            onclick="return confirm('Are you sure you want to delete this purok?');">
-                                                            <i class="bi bi-trash"></i> Delete
+                                                            <i class="bi bi-trash"></i>
                                                         </a>
                                                         <a href="../residents/index.php?purok=<?= (int)$purok['purok_id'] ?>"
                                                            class="btn btn-secondary btn-sm">

@@ -15,7 +15,6 @@ A lightweight, modern barangay management system built with PHP, HTMX, and SQLit
 ## Technology Stack
 
 - **Backend**: Pure PHP (no frameworks)
-- **Frontend**: HTMX for dynamic interactions
 - **Database**: SQLite (single-file database)
 
 

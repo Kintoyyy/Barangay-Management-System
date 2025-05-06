@@ -338,7 +338,7 @@ try {
                     <?php else: ?>
                         <div class="text-center py-5">
                             <i class="bi bi-cash-coin" style="font-size: 3rem;"></i>
-                            <p class="mt-3 text-muted">Select a transaction to edit or add a new one</p>
+                            <p class="mt-3 text-muted">Select a transaction to or add a new one</p>
                              <a href="index.php?action=add" class="btn btn-success mt-3">
                                 <i class="bi bi-plus-circle"></i> Add New Transaction
                             </a>
@@ -404,8 +404,8 @@ try {
                                                             <i class="bi bi-trash"></i>
                                                         </a>
                                                          <?php if (!empty($transaction['resident_id'])): ?>
-                                                             <a href="../residents/view.php?id=<?= (int)$transaction['resident_id'] ?>"
-                                                                class="btn btn-secondary btn-sm" title="View Resident" target="_blank">
+                                                             <a href="../residents?id=<?= (int)$transaction['resident_id'] ?>"
+                                                                class="btn btn-secondary btn-sm" title="View Resident">
                                                                 <i class="bi bi-person-vcard"></i>
                                                             </a>
                                                         <?php endif; ?>

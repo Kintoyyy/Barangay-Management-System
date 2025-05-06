@@ -171,6 +171,7 @@ try {
     $search = isset($_GET['search']) ? $_GET['search'] : '';
     $purokFilter = isset($_GET['purok']) ? (int)$_GET['purok'] : 0;
     $householdFilter = isset($_GET['household']) ? (int)$_GET['household'] : 0;
+    $idFilter = isset($_GET['id']) ? (int)$_GET['id'] : 0;
     
     $whereClause = [];
     $params = [];
@@ -190,6 +191,11 @@ try {
     if ( $householdFilter > 0 ) {
         $whereClause[] = "r.household_id = ?";
         $params[]      = $householdFilter;
+    }
+
+    if ( $idFilter > 0 ) {
+        $whereClause[] = "r.resident_id = ?";
+        $params[]      = $idFilter;
     }
     
     $whereSQL = !empty($whereClause) ? "WHERE " . implode(" AND ", $whereClause) : "";
@@ -524,12 +530,12 @@ try {
                                                     <div class="btn-group" role="group">
                                                         <a href="index.php?action=edit&id=<?= (int)$resident['resident_id'] ?>"
                                                            class="btn btn-info btn-sm">
-                                                            <i class="bi bi-pencil"></i> Edit
+                                                            <i class="bi bi-pencil"></i>
                                                         </a>
                                                         <a href="index.php?action=delete&id=<?= (int)$resident['resident_id'] ?>"
                                                            class="btn btn-danger btn-sm"
                                                            onclick="return confirm('Are you sure you want to delete this resident?');">
-                                                            <i class="bi bi-trash"></i> Delete
+                                                            <i class="bi bi-trash"></i>
                                                         </a>
                                                     </div>
                                                 </td>

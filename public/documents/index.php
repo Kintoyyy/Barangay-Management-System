@@ -396,12 +396,12 @@ try {
                                                     <div class="btn-group" role="group">
                                                         <a href="index.php?action=edit&id=<?= (int)$doc['document_id'] ?>"
                                                            class="btn btn-info btn-sm">
-                                                            <i class="bi bi-pencil"></i> Edit
+                                                            <i class="bi bi-pencil"></i>
                                                         </a>
                                                         <a href="index.php?action=delete&id=<?= (int)$doc['document_id'] ?>"
                                                            class="btn btn-danger btn-sm"
                                                            onclick="return confirm('Are you sure you want to delete this document record?');">
-                                                            <i class="bi bi-trash"></i> Delete
+                                                            <i class="bi bi-trash"></i>
                                                         </a>
                                                     </div>
                                                 </td>

@@ -480,12 +480,12 @@ catch ( PDOException $e ) {
                                                         role="group">
                                                         <a href="?action=edit&id=<?= (int) $complaint[ 'complaint_id' ] ?>"
                                                             class="btn btn-info btn-sm">
-                                                            <i class="bi bi-pencil"></i> Edit
+                                                            <i class="bi bi-pencil"></i>
                                                         </a>
                                                         <a href="?action=delete&id=<?= (int) $complaint[ 'complaint_id' ] ?>"
                                                             class="btn btn-danger btn-sm"
                                                             onclick="return confirm('Are you sure you want to delete this complaint record?');">
-                                                            <i class="bi bi-trash"></i> Delete
+                                                            <i class="bi bi-trash"></i>
                                                         </a>
                                                     </div>
                                                 </td>
