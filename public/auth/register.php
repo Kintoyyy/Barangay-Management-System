@@ -159,8 +159,8 @@ $allowedRoles = ['admin', 'official', 'health_worker'];
     <?php
     // if (is_logged_in() && has_role('admin')) {
         $templatePath = __DIR__ . '/../templates';
-        if (file_exists($templatePath . '/navbar.html')) {
-            include_once $templatePath . '/navbar.html';
+        if (file_exists($templatePath . '/navbar.php')) {
+            include_once $templatePath . '/navbar.php';
         }
     // }
     ?>

@@ -228,7 +228,7 @@ if ($purokFilter) {
 </head>
 
 <body>
-    <?php include_once TEMPLATE_PATH . '/navbar.html'; ?>
+    <?php include_once '../navbar.php'; ?>
 
     <div class="container mt-4">
         <div class="row mb-4">
